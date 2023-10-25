@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" th:classappend="${httpServletRequest.requestURI == '/admin/' ? 'active' : ''}" aria-current="page" th:href="@{/admin/}">Inicio</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" th:classappend="${httpServletRequest.requestURI == '/admin/categoria' ? 'active' : ''}" th:href="@{/admin/categoria}">Categoria</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" th:classappend="${httpServletRequest.requestURI == '/admin/usuario' ? 'active' : ''}" th:href="@{/admin/usuario}">Usuarios</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" th:classappend="${httpServletRequest.requestURI == '/admin/posts' ? 'active' : ''}" th:href="@{/admin/posts}">Posts</a>
+    </li>
+    <!--li class="nav-item">
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li -->
+</ul>
